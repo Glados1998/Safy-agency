@@ -1,0 +1,5 @@
+# responsiveWebpage note
+
+ ### In order to see the responsive behavior, please 'inspect' the webpage and go to the responsive design mode.
+
+Thank you for your time.
