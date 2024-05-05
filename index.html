@@ -5,297 +5,233 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Document</title>
-
+    <link rel="stylesheet" href="assets/style/index.css">
+    <title>Safy - Travel Agency</title>
 </head>
-  
-    <body>
-
-        <div class="icons block--wp"> 
-
-            <a href=""><img src="assets/icon_1.png" alt="twitter link"></a> <!--twitter-->
-            <a href=""><img src="assets/icon_2.png" alt="facebook link"></a> <!--facebook-->
-
+<body>
+<div class="icons block--wp">
+    <a href=""><img src="assets/images/icon_1.png" alt="twitter link"></a> <!--twitter-->
+    <a href=""><img src="assets/images/icon_2.png" alt="facebook link"></a> <!--facebook-->
+</div>
+<header class="block--color">
+    <nav class="nav block--wp">
+        <img src="assets/images/logo.png" class="img--element" alt="Safy 'move safer, move Safy'">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown"><a href="#">Book</a>
+                <div class="drop-content">
+                    <a href="#">Flights</a>
+                    <a href="#">Tours</a>
+                    <a href="#">Trains</a>
+                </div>
+            </li>
+            <li class="dropdown"><a href="#">Destinations</a>
+                <div class="drop-content">
+                    <a href="#">Europe</a>
+                    <a href="#">America</a>
+                    <a href="#">Asia</a>
+                    <a href="#">Oceania</a>
+                </div>
+            </li>
+            <li><a href="#">Prices</a></li>
+            <li><a href="#">Alerts</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <aside class="block--wp">
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="assets/slides/slides_1.jpg" alt="Woman at the airpor" width="940" height="500">
+            </div>
+            <div class="slide">
+                <img src="assets/slides/slides_2.jpg" alt="Woman with a briefcase" width="940" height="500">
+            </div>
+            <div class="slide">
+                <img src="assets/slides/slides_3.jpg" alt="Person clibing" width="940" height="500">
+            </div>
+            <div class="slide">
+                <img src="assets/slides/slides_4.jpg" alt="Person taking pictures" width="940" height="500">
+            </div>
+            <div class="slide">
+                <img src="assets/slides/slides_5.jpg" alt="A group of people " width="940" height="500">
+            </div>
+            <div class="slide">
+                <img src="assets/slides/slides_6.jpg" alt="Person surfing" width="940" height="500">
+            </div>
+            <span class="prev" onclick="nextSlide(-1)">&#10094;</span>
+            <span class="next" onclick="nextSlide(1)">&#10095;</span>
         </div>
-
-        <header class="block--color">
-
-                <nav class="nav block--wp">
-
-                    <img src="assets/logo.png" class="img--element" alt="Safy 'move safer, move Safy'">
-                
-                    <ul>
-                
-                        <li><a href="#">Home</a></li>
-                        <li class="dropdown"><a href="#">Book</a> 
-                            <div class="drop-content">
-                                <a href="#">Flights</a>
-                                <a href="#">Tours</a>
-                                <a href="#">Trains</a>
-                            </div>
-                        </li>
-                
-                        <li class="dropdown"><a href="#">Destinations</a> 
-                            <div class="drop-content">
-                                <a href="#">Europe</a>
-                                <a href="#">America</a>
-                                <a href="#">Asia</a>
-                                <a href="#">Oceania</a>
-                            </div>
-                        </li>
-                
-                        <li><a href="#">Prices</a></li>
-                        <li><a href="#">Alerts</a></li>
-                        <li><a href="#">Contact</a></li>
-                
-                    </ul>
-                
-                </nav>
-
-        </header>
-
-        <main>
-
-            <aside class="block--wp">
-
-                    <div class="slideshow-container">
-                        
-                    <div class="slide">
-                        <img src="assets/slides_1.jpg" alt="Woman at the airpor">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="assets/slides_2.jpg" alt="Woman with a briefcase">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="assets/slides_3.jpg" alt="Person clibing">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="assets/slides_4.jpg" alt="Person taking pictures">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="assets/slides_5.jpg" alt="A group of people ">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="assets/slides_6.jpg" alt="Person surfing">
-                    </div>
-                    
-                    <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="nextSlide(1)">&#10095;</a>
-                
-                </div>  
-                <br>
-
-                <div style="text-align: center;">
-                
-                    <span class="dot" onclick="currentslide(1)"></span>
-                    <span class="dot" onclick="currentslide(2)"></span>
-                    <span class="dot" onclick="currentslide(3)"></span>
-                    <span class="dot" onclick="currentslide(4)"></span>
-                    <span class="dot" onclick="currentslide(5)"></span>
-                    <span class="dot" onclick="currentslide(6)"></span>
-                    
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="setCurrentslide(1)"></span>
+            <span class="dot" onclick="setCurrentslide(2)"></span>
+            <span class="dot" onclick="setCurrentslide(3)"></span>
+            <span class="dot" onclick="setCurrentslide(4)"></span>
+            <span class="dot" onclick="setCurrentslide(5)"></span>
+            <span class="dot" onclick="setCurrentslide(6)"></span>
+        </div>
+    </aside>
+    <section class="middle">
+        <div class="service-container block--wp block--section">
+            <div class="service-item">
+                <div class="service-item-header">
+                    <img src="assets/images/img_2.png" alt="Camp fire">
+                    <h3>Safe, structured and<br>
+                        amazing application.</h3>
                 </div>
-
-            </aside>
-
-            <section class="middle">
-
-                <div class="service-container block--wp block--section">
-
-                    <div class="service-item">
-                    
-                        <div class="service block--color">
-                    
-                            <img src="assets/img_2.png" alt="Camp fire">
-                    
-                            <h3>Safe, structured and<br>
-                                amazing application.</h3>
-                    
-                        </div>
-                    
-                        <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic temporibus<br>
-                            maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus aut
-                            ducimus
-                            expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-                    
-                        <a href="#">more info</a>
-                    
-                    </div>
-                    
-                    <div class="service-item">
-                    
-                        <div class="service block--color">
-                    
-                            <img src="assets/img_6.png" alt="Tent">
-                            <h3>the sun shining today, book your trip.</h3>
-                    
-                        </div>
-                    
-                        <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic temporibus<br>
-                            maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus aut
-                            ducimus
-                            expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-                    
-                        <a href="#">more info</a>
-                    
-                    </div>
-                    
-                    <div class="service-item ">
-                    
-                        <div class="service block--color">
-                    
-                            <img src="assets/img_1.png" alt="Paw of animal">
-                            <h3>meet new people and<br>live more intensly </h3>
-                    
-                        </div>
-                    
-                        <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic temporibus<br>
-                            maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus aut
-                            ducimus
-                            expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-                    
-                        <a href="#">more info</a>
-                    
-                    </div>
-                
+                <div class="service-item-content">
+                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                        temporibus<br>
+                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
+                        temporibus aut
+                        ducimus
+                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
                 </div>
-            
-                <section class="destination-container block--wp block--section">
-            
-                    <h2>Destinations</h2>
-
-                    <hr>
-
-                        <div class="nation-container block--section">
-
-                            <div class="nation-item">
-                                <img src="assets/france.jpg" alt="Flag of France">
-                                <h3>France</h3>
-                            
-                            </div>
-                            
-                            <div class="nation-item">
-                            
-                                <img src="assets/brazil.jpg" alt="Flag of Brazil">
-                                <h3>Brazil</h3>
-                            
-                            </div>
-                            
-                            <div class="nation-item">
-                            
-                                <img src="assets/algeri.jpg" alt="Flag of Alegrie">
-                                <h3>Algerie</h3>
-                            
-                            </div>
-
-                        </div>
-            
-                </section>
-            
-            </section>
-            
-            <section class="lower block--wp block--section">
-            
-                <div class="lower-container">
-                    
-                    <h2>About us</h2>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic temporibus<br>
-                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus aut ducimus
-                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-            
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mauris tortor, eleifend quis orci ac, consequat
-                    volutpat felis. Vestibulum nec ex ligula. In hac habitasse platea dictumst. Etiam auctor consectetur neque. Praesent sit
-                    amet urna nisi. Sed semper, nunc non eleifend egestas, mi nibh malesuada ex, vel egestas velit ante eget justo. Cras non
-                    porttitor arcu. Curabitur accumsan urna diam, sit amet rhoncus quam pharetra at. Duis nisl massa, mattis nec venenatis
-                    eget, eleifend id sapien.</p>
-
-                    <p>Sed ornare tempor est, ut mattis justo tincidunt in. Integer id urna vel lectus ultricies eleifend. Mauris quis elit
-                    vitae est commodo laoreet. In risus nisi, tincidunt id tellus volutpat, elementum lacinia est. Donec quis porta sem.
-                    Etiam malesuada, elit ac tincidunt tempus, purus velit aliquam arcu, eu finibus dui libero sed est. Nulla aliquam luctus
-                    massa, eu semper magna aliquam at. Integer ac tempus felis. Donec ultrices fringilla elementum. Sed at mauris augue.
-                    Mauris vel risus justo. Vivamus blandit quam auctor sapien interdum elementum. Mauris in ornare eros, ac hendrerit
-                    augue. In commodo purus nisl, nec consectetur nisl iaculis sed. Etiam sollicitudin leo massa. Nulla vitae sapien ac
-                    ligula pulvinar consectetur ut vel enim.</p>
-                    
-                    
-                    <p>
-                    Pellentesque eu varius ante. Morbi facilisis nisi consectetur, pulvinar turpis non, aliquet mi. Praesent sed nibh sed
-                    sapien eleifend fringilla eget quis arcu. Nam aliquet placerat urna sed cursus. Donec pellentesque fermentum tincidunt.
-                    Curabitur tincidunt finibus felis. Nullam orci leo, convallis nec metus in, suscipit cursus eros. Aliquam lacinia tellus
-                    at massa dictum, in dignissim augue iaculis. Morbi convallis est eget nisl congue, a facilisis felis dapibus. Morbi
-                    rutrum lacus vitae turpis luctus porta. Integer sit amet mauris ut enim finibus blandit ac a ligula. Mauris quis lacus
-                    malesuada diam blandit pharetra.</p>
-            
+                <a href="#">More info</a>
+            </div>
+            <div class="service-item">
+                <div class="service-item-header">
+                    <img src="assets/images/img_6.png" alt="Tent">
+                    <h3>the sun shining today, book your trip.</h3>
                 </div>
-            
-                <div class="lower-container">
-            
-                    <h2>Why us</h2>
-                    <hr>
-                    
-                    <img src="assets/img_3.png" alt="Compass">
-                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic temporibus<br>
-                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus aut ducimus
+                <div class="service-item-content">
+                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                        temporibus<br>
+                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
+                        temporibus aut
+                        ducimus
                         expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-                    
-                    <img src="assets/img_4.png" alt="map">
-                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic temporibus<br>
-                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus aut ducimus
-                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-                    
-                    <img src="assets/img_5.png" alt="Velo">
-                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic temporibus<br>
-                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus aut ducimus
-                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-            
                 </div>
-            
-                <div class="lower-container bottom--container" >
-            
-                    <h2>How to travel</h2>
-                    <hr>
-                    
-                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic temporibus<br>
-                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus aut ducimus
-                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-
-                    <button>Subscribe</button>
-            
+                <a href="#">More info</a>
+            </div>
+            <div class="service-item ">
+                <div class="service-item-header">
+                    <img src="assets/images/img_1.png" alt="Paw of animal">
+                    <h3>meet new people and<br>live more intensly </h3>
                 </div>
-            
-            </section>
-
-        </main> 
-
-        <footer class="footer block--color">
-
-            <nav class="nav block--wp">
-
-                <ul>
-                
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Book</a></li>
-                    <li><a href="#">Destinations</a></li>
-                    <li><a href="#">prices</a></li>
-                    <li><a href="#">Alerts</a></li>
-                    <li><a href="#">Contact</a></li>
-                
-                </ul>
-
-                <small>© there is no birds arounf here, Look around</small>
-
-            </nav>
-
-        </footer>
-        
-    </body>
-    <script src="script/script.js"></script>
-
-    </html>
+                <div class="service-item-content">
+                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                        temporibus<br>
+                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
+                        temporibus aut
+                        ducimus
+                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+                </div>
+                <a href="#">More info</a>
+            </div>
+        </div>
+        <section class="destination-container block--wp block--section">
+            <h2>Destinations</h2>
+            <hr>
+            <div class="nation-container block--section">
+                <div class="nation-item">
+                    <img src="assets/images/france.jpg" alt="Flag of France">
+                    <span>France</span>
+                </div>
+                <div class="nation-item">
+                    <img src="assets/images/brazil.jpg" alt="Flag of Brazil">
+                    <span>Brazil</span>
+                </div>
+                <div class="nation-item">
+                    <img src="assets/images/algeri.jpg" alt="Flag of Alegrie">
+                    <span>Algerie</span>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="lower block--wp block--section">
+        <div class="lower-container">
+            <h2>About us</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                temporibus<br>
+                maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus
+                aut ducimus
+                expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mauris tortor, eleifend quis orci ac,
+                consequat
+                volutpat felis. Vestibulum nec ex ligula. In hac habitasse platea dictumst. Etiam auctor consectetur
+                neque. Praesent sit
+                amet urna nisi. Sed semper, nunc non eleifend egestas, mi nibh malesuada ex, vel egestas velit ante eget
+                justo. Cras non
+                porttitor arcu. Curabitur accumsan urna diam, sit amet rhoncus quam pharetra at. Duis nisl massa, mattis
+                nec venenatis
+                eget, eleifend id sapien.</p>
+            <p>Sed ornare tempor est, ut mattis justo tincidunt in. Integer id urna vel lectus ultricies eleifend.
+                Mauris quis elit
+                vitae est commodo laoreet. In risus nisi, tincidunt id tellus volutpat, elementum lacinia est. Donec
+                quis porta sem.
+                Etiam malesuada, elit ac tincidunt tempus, purus velit aliquam arcu, eu finibus dui libero sed est.
+                Nulla aliquam luctus
+                massa, eu semper magna aliquam at. Integer ac tempus felis. Donec ultrices fringilla elementum. Sed at
+                mauris augue.
+                Mauris vel risus justo. Vivamus blandit quam auctor sapien interdum elementum. Mauris in ornare eros, ac
+                hendrerit
+                augue. In commodo purus nisl, nec consectetur nisl iaculis sed. Etiam sollicitudin leo massa. Nulla
+                vitae sapien ac
+                ligula pulvinar consectetur ut vel enim.</p>
+            <p>
+                Pellentesque eu varius ante. Morbi facilisis nisi consectetur, pulvinar turpis non, aliquet mi. Praesent
+                sed nibh sed
+                sapien eleifend fringilla eget quis arcu. Nam aliquet placerat urna sed cursus. Donec pellentesque
+                fermentum tincidunt.
+                Curabitur tincidunt finibus felis. Nullam orci leo, convallis nec metus in, suscipit cursus eros.
+                Aliquam lacinia tellus
+                at massa dictum, in dignissim augue iaculis. Morbi convallis est eget nisl congue, a facilisis felis
+                dapibus. Morbi
+                rutrum lacus vitae turpis luctus porta. Integer sit amet mauris ut enim finibus blandit ac a ligula.
+                Mauris quis lacus
+                malesuada diam blandit pharetra.</p>
+        </div>
+        <div class="lower-container">
+            <h2>Why us</h2>
+            <hr>
+            <img src="assets/images/img_3.png" alt="Compass">
+            <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                temporibus<br>
+                maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus
+                aut ducimus
+                expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+            <img src="assets/images/img_4.png" alt="map">
+            <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                temporibus<br>
+                maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus
+                aut ducimus
+                expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+            <img src="assets/images/img_5.png" alt="Velo">
+            <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                temporibus<br>
+                maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus
+                aut ducimus
+                expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+        </div>
+        <div class="lower-container bottom--container">
+            <h2>How to travel</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                temporibus<br>
+                maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus
+                aut ducimus
+                expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+            <button class="btn-success">Subscribe</button>
+        </div>
+    </section>
+</main>
+<footer class="footer block--color">
+    <nav class="nav block--wp">
+        <small>© there is no birds arounf here, Look around</small>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">prices</a></li>
+            <li><a href="#">Alerts</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+<script src="script/script.js"></script>
+</html>

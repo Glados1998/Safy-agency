@@ -1,44 +1,64 @@
-// positions the current slide
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// used to control the next an previous buttons, by adding or subtracting the number of slides
+// Set a timer to change slide every 3 seconds
+setInterval(nextSlide, 6000, 1);
+
 function nextSlide(n) {
   showSlides(slideIndex += n);
 }
 
-
-//slideshow function, it makes this whole thing work
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("slide");
   let dots = document.getElementsByClassName("dot");
 
-  //makes sure the slide show dosent end
-  if (n > slides.length) {
+  slideIndex = n > slides.length ? 1 : n < 1 ? slides.length : slideIndex;
 
-    slideIndex = 1;
+  Array.from(slides).forEach((slide, i) => {
+    slide.style.display = "none";
+    if (i === slideIndex - 1) {
+      slide.style.display = "block";
+    }
+  });
+
+  Array.from(dots).forEach((dot, i) => {
+    dot.className = dot.className.replace(" active", "");
+    if (i === slideIndex - 1) {
+      dot.className += " active";
+    }
+  });
+}
+
+function setCurrentslide(n) {
+  showSlides(slideIndex = n);
+}
+
+// Get all dropdown links
+let dropdowns = document.querySelectorAll('.dropdown');
+
+// Loop through each dropdown link
+dropdowns.forEach(dropdown => {
+  // Add click event listener
+  dropdown.addEventListener('click', function(event) {
+    // Prevent the default action
+    event.preventDefault();
+
+    // Get the dropdown menu
+    let dropdownMenu = this.nextElementSibling;
+
+    // Toggle the 'show' class
+    dropdownMenu.classList.toggle('show');
+  });
+});
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown')) {
+    let dropdownMenus = document.querySelectorAll('.dropdown-menu');
+    dropdownMenus.forEach(dropdownMenu => {
+      if (dropdownMenu.classList.contains('show')) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
   }
-  if (n < 1) {
-
-    // "counts" the present slides and puts it inside the value "slideIndex"
-    slideIndex = slides.length;
-  }
-
-
-  // puts the other images to display none
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-
-  //replaces the class name "active" with nothing who in return nullifying the hover effet in css
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  //shows the current image with the display "active"
-  slides[slideIndex-1].style.display = "block";
-
-  //links the current "dot" with the class name "active" who in return triggers a hover effect in css
-  dots[slideIndex-1].className += " active";
 }
