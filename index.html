@@ -60,60 +60,66 @@
             <div class="slide">
                 <img src="assets/slides/slides_6.jpg" alt="Person surfing" width="940" height="500">
             </div>
-            <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
-            <a class="next" onclick="nextSlide(1)">&#10095;</a>
+            <span class="prev" onclick="nextSlide(-1)">&#10094;</span>
+            <span class="next" onclick="nextSlide(1)">&#10095;</span>
         </div>
         <br>
         <div style="text-align: center;">
-            <span class="dot" onclick="currentslide(1)"></span>
-            <span class="dot" onclick="currentslide(2)"></span>
-            <span class="dot" onclick="currentslide(3)"></span>
-            <span class="dot" onclick="currentslide(4)"></span>
-            <span class="dot" onclick="currentslide(5)"></span>
-            <span class="dot" onclick="currentslide(6)"></span>
+            <span class="dot" onclick="setCurrentslide(1)"></span>
+            <span class="dot" onclick="setCurrentslide(2)"></span>
+            <span class="dot" onclick="setCurrentslide(3)"></span>
+            <span class="dot" onclick="setCurrentslide(4)"></span>
+            <span class="dot" onclick="setCurrentslide(5)"></span>
+            <span class="dot" onclick="setCurrentslide(6)"></span>
         </div>
     </aside>
     <section class="middle">
         <div class="service-container block--wp block--section">
             <div class="service-item">
-                <div class="service block--color">
+                <div class="service-item-header">
                     <img src="assets/images/img_2.png" alt="Camp fire">
                     <h3>Safe, structured and<br>
                         amazing application.</h3>
                 </div>
-                <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
-                    temporibus<br>
-                    maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
-                    temporibus aut
-                    ducimus
-                    expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-                <a href="#">more info</a>
+                <div class="service-item-content">
+                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                        temporibus<br>
+                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
+                        temporibus aut
+                        ducimus
+                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+                </div>
+                <a href="#">More info</a>
             </div>
             <div class="service-item">
-                <div class="service block--color">
+                <div class="service-item-header">
                     <img src="assets/images/img_6.png" alt="Tent">
                     <h3>the sun shining today, book your trip.</h3>
                 </div>
-                <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
-                    temporibus<br>
-                    maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
-                    temporibus aut
-                    ducimus
-                    expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-                <a href="#">more info</a>
+                <div class="service-item-content">
+                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                        temporibus<br>
+                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
+                        temporibus aut
+                        ducimus
+                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+                </div>
+                <a href="#">More info</a>
             </div>
             <div class="service-item ">
-                <div class="service block--color">
+                <div class="service-item-header">
                     <img src="assets/images/img_1.png" alt="Paw of animal">
                     <h3>meet new people and<br>live more intensly </h3>
                 </div>
-                <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
-                    temporibus<br>
-                    maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
-                    temporibus aut
-                    ducimus
-                    expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-                <a href="#">more info</a>
+                <div class="service-item-content">
+                    <p>Lorem ipsum dolor sit amet. Ut dolore qui minima illo 33 dolorem assumenda hic quidem nihil hic
+                        temporibus<br>
+                        maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem
+                        temporibus aut
+                        ducimus
+                        expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
+                </div>
+                <a href="#">More info</a>
             </div>
         </div>
         <section class="destination-container block--wp block--section">
@@ -122,15 +128,15 @@
             <div class="nation-container block--section">
                 <div class="nation-item">
                     <img src="assets/images/france.jpg" alt="Flag of France">
-                    <h3>France</h3>
+                    <span>France</span>
                 </div>
                 <div class="nation-item">
                     <img src="assets/images/brazil.jpg" alt="Flag of Brazil">
-                    <h3>Brazil</h3>
+                    <span>Brazil</span>
                 </div>
                 <div class="nation-item">
                     <img src="assets/images/algeri.jpg" alt="Flag of Alegrie">
-                    <h3>Algerie</h3>
+                    <span>Algerie</span>
                 </div>
             </div>
         </section>
@@ -209,12 +215,13 @@
                 maxime eos Quis deserunt et modi vitae. Sed veniam modi quo provident natus nam voluptatem temporibus
                 aut ducimus
                 expedita? Est commodi nemo sit rerum adipisci sed repudiandae natus et quisquam omnis.</p>
-            <button>Subscribe</button>
+            <button class="btn-success">Subscribe</button>
         </div>
     </section>
 </main>
 <footer class="footer block--color">
     <nav class="nav block--wp">
+        <small>© there is no birds arounf here, Look around</small>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Book</a></li>
@@ -223,7 +230,6 @@
             <li><a href="#">Alerts</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <small>© there is no birds arounf here, Look around</small>
     </nav>
 </footer>
 </body>
